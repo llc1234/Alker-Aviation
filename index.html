@@ -1,1 +1,174 @@
-<h1>hello 1</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Alker Aviation</title>
+<style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        background-color: #0d0d0d;
+        color: #fff;
+        line-height: 1.6;
+    }
+
+    header {
+        background: rgba(0,0,0,0.8);
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+    }
+    header h1 {font-size: 1.5rem; letter-spacing: 1px;}
+    nav ul {list-style: none; display: flex; gap: 2rem;}
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        position: relative;
+    }
+    nav ul li a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0%;
+        height: 2px;
+        background: #fff;
+        transition: 0.3s;
+    }
+    nav ul li a:hover::after {width: 100%;}
+
+    .hero {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 2rem;
+        background: linear-gradient(180deg, rgba(0,0,0,0.3), rgba(0,0,0,0.6)), 
+                    url('https://pigeonis.in/wp-content/uploads/2023/04/Drone-Inspection-2.jpg') center/cover no-repeat;
+    }
+
+    .hero h2 {font-size: 3rem; font-weight: 700; margin-bottom: 1rem;}
+    .hero p {font-size: 1.2rem; max-width: 700px; opacity: 0.8;}
+
+    section {padding: 4rem 2rem; max-width: 1100px; margin: auto;}
+    section h3 {font-size: 2rem; margin-bottom: 1.5rem;}
+    section p {opacity: 0.85; font-size: 1.1rem;}
+
+    /* Split layout for drone types */
+    .drone-type {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+    .drone-type img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    .drone-type .text {
+        flex: 1;
+        min-width: 280px;
+    }
+    .drone-type .text h4 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .drone-type .text p {
+        opacity: 0.8;
+    }
+
+    footer {
+        background: #111;
+        padding: 2rem;
+        text-align: center;
+        border-top: 1px solid #333;
+    }
+    footer p {margin: 0.5rem 0; font-size: 0.9rem; opacity: 0.8;}
+    footer a {color: #fff; text-decoration: none; font-weight: bold;}
+    footer a:hover {text-decoration: underline;}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Alker Aviation</h1>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#fleet">Fleet</a></li>
+            <li><a href="#drones">Drone Types</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="hero">
+    <h2>Innovating the Future of Drones</h2>
+    <p>At Alker Aviation, we design, build, and operate cutting-edge drones for industry, exploration, and adventure.</p>
+</div>
+
+<section id="about">
+    <h3>About Us</h3>
+    <p>Alker Aviation is a leader in aerial innovation. Our mission is to push the boundaries of drone technology, offering unmatched performance, safety, and style. We serve clients worldwide in industries from cinematography to infrastructure inspection.</p>
+</section>
+
+<section id="services">
+    <h3>Our Services</h3>
+    <p>We provide advanced drone solutions for aerial photography, mapping, and infrared inspections. Our pilots and technicians ensure precision and safety in every mission.</p>
+</section>
+
+<section id="fleet">
+    <h3>Our Fleet</h3>
+    <p>From agile photography drones to heavy-lift industrial UAVs, our fleet is built for every challenge. We constantly upgrade our systems to deliver the best results possible.</p>
+</section>
+
+<section id="drones">
+    <h3>Drone Types</h3>
+
+    <div class="drone-type">
+        <img src="https://store.dji.bg/img/cms/blog/tips/top-10-drone-transition-shots-for-creating-amazing-aerial-footage/1.gif" alt="Photography Drone">
+        <div class="text">
+            <h4>Photography Drone</h4>
+            <p>Equipped with ultra-high resolution cameras and stabilization systems to capture cinematic aerial imagery for media, real estate, and marketing.</p>
+        </div>
+    </div>
+
+    <div class="drone-type">
+        <img src="https://enterprise-insights.dji.com/hs-fs/hubfs/LiDAR%20Power%20Cables%20with%20measurement%20GIF.gif?width=600&name=LiDAR%20Power%20Cables%20with%20measurement%20GIF.gif" alt="Industrial Drone">
+        <div class="text">
+            <h4>Industrial Inspection Drone</h4>
+            <p>Specialized drones for infrastructure inspections — including bridges, towers, and pipelines — using both visual and infrared imaging to detect structural issues before they become critical.</p>
+        </div>
+    </div>
+
+    <div class="drone-type">
+        <img src="https://images.squarespace-cdn.com/content/v1/56d44acbd210b8b23f21e8f3/bbe51d64-8e0b-41e1-8613-50a0ac4b763c/thermalgif2.gif" alt="IR Inspection Drone">
+        <div class="text">
+            <h4>Infrared (IR) Inspection Drone</h4>
+            <p>Advanced UAVs with thermal cameras for detecting heat loss, electrical faults, and hidden structural problems. Ideal for solar panel inspections, power line monitoring, and industrial safety checks.</p>
+        </div>
+    </div>
+
+</section>
+
+<footer id="contact">
+    <p>Contact Us:</p>
+    <p><a href="mailto:Sven@alker.org">Sven@alker.org</a></p>
+    <p>&copy; 2025 Alker Aviation. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
