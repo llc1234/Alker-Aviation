@@ -44,6 +44,7 @@
     }
     nav ul li a:hover::after {width: 100%;}
 
+    /* Hero Section with Slideshow */
     .hero {
         height: 90vh;
         display: flex;
@@ -52,8 +53,60 @@
         justify-content: center;
         text-align: center;
         padding: 0 2rem;
-        background: linear-gradient(180deg, rgba(0,0,0,0.3), rgba(0,0,0,0.6)), 
-                    url('https://pigeonis.in/wp-content/uploads/2023/04/Drone-Inspection-2.jpg') center/cover no-repeat;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+        z-index: 1;
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .hero-slideshow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        animation: slideShow 20s infinite linear;
+    }
+    
+    .hero-slideshow .slide {
+        min-width: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    @keyframes slideShow {
+        0% { transform: translateX(0); }
+        10% { transform: translateX(0); }
+        12.5% { transform: translateX(-100%); }
+        22.5% { transform: translateX(-100%); }
+        25% { transform: translateX(-200%); }
+        35% { transform: translateX(-200%); }
+        37.5% { transform: translateX(-300%); }
+        47.5% { transform: translateX(-300%); }
+        50% { transform: translateX(-400%); }
+        60% { transform: translateX(-400%); }
+        62.5% { transform: translateX(-500%); }
+        72.5% { transform: translateX(-500%); }
+        75% { transform: translateX(-600%); }
+        85% { transform: translateX(-600%); }
+        87.5% { transform: translateX(-700%); }
+        97.5% { transform: translateX(-700%); }
+        100% { transform: translateX(-800%); }
     }
 
     .hero h2 {font-size: 3rem; font-weight: 700; margin-bottom: 1rem;}
@@ -116,8 +169,27 @@
 </header>
 
 <div class="hero">
-    <h2>Innovating the Future of Drones</h2>
-    <p>At Alker Aviation, we design, build, and operate cutting-edge drones for industry, exploration, and adventure.</p>
+    <!-- Slideshow container -->
+    <div class="hero-slideshow">
+        <div class="slide" style="background-image: url('https://pigeonis.in/wp-content/uploads/2023/04/Drone-Inspection-2.jpg')"></div>
+        <div class="slide" style="background-image: url('https://cdn.voliro.com/wp-content/uploads/2024/07/Industry-Oil-and-Gas.png')"></div>
+        <div class="slide" style="background-image: url('https://feds.group/wp-content/uploads/2024/05/Drone-Inspection-Are-Improving-Efficiency-in-the-utilities-industry.png')"></div>
+        <div class="slide" style="background-image: url('https://cdn.prod.website-files.com/65a4fdb423a76722fd6d8265/65cdbc332f8a25117bdddddd_652fa58635003effe6fec53d_drone-inspection-software.jpeg')"></div>
+        <div class="slide" style="background-image: url('https://i.shgcdn.com/7d7ac477-f8b9-4e4c-a83d-0bbd7ec76f53/-/format/auto/-/preview/3000x3000/-/quality/lighter/')"></div>
+        <div class="slide" style="background-image: url('https://nordicstartupnews.com/wp-content/uploads/2017/12/droneplan.jpg')"></div>
+        <div class="slide" style="background-image: url('https://uavcoach.com/wp-content/uploads/2019/06/thermal-drone-comparison-1024x723.jpg')"></div>
+        <div class="slide" style="background-image: url('https://www.ayresassociates.com/wp-content/uploads/2018/12/Chimney-stack-inspections-UAS-EthanAllen-092618-27-9110-WEB-610x362.jpg')"></div>
+
+        <!-- div class="slide" style="background-image: url('https://images.pexels.com/photos/3990840/pexels-photo-3990840.jpeg')"></div>
+        <div class="slide" style="background-image: url('https://images.pexels.com/photos/1271620/pexels-photo-1271620.jpeg')"></div>
+        <div class="slide" style="background-image: url('https://images.pexels.com/photos/3731256/pexels-photo-3731256.jpeg')"></div>
+        <div class="slide" style="background-image: url('https://images.pexels.com/photos/1106468/pexels-photo-1106468.jpeg')"></div -->
+    </div>
+    
+    <div class="hero-content">
+        <h2>Innovating the Future of Drones</h2>
+        <p>At Alker Aviation, we design, build, and operate cutting-edge drones for industry, exploration, and adventure.</p>
+    </div>
 </div>
 
 <section id="about">
